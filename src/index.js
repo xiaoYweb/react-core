@@ -1,7 +1,17 @@
-import React from 'react';
-import ReactDom from 'react-dom';
+import { React, ReactDom } from './common';
 
+const onclick = () => { alert(11) }
+// const el = <button id="say-hello"> say
+//   <span color="red" onClick={onclick}>hello</span>
+// </button>;
+const el = React.createElement(
+  'button',
+  { id: 'say-hello', onClick: onclick },
+  'say',
+  React.createElement('span', { style: { color: 'red' } }, 'hello'))
+
+console.log('el', el)
 ReactDom.render(
-  <h1>hello</h1>,
+  el,
   document.getElementById('root')
 )
