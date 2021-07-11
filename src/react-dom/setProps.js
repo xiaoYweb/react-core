@@ -12,8 +12,8 @@ function setProps(dom, props) {
 
 function setProp(dom, key, value) {
   if (/^on/.test(key)) {
-    dom[key.toLowerCase()] = value;
-    // addEvent(dom, key, value)
+    // dom[key.toLowerCase()] = value;
+    addEvent(dom, key, value)
   } else if (key ==='style') {
     for (const styleName in value) {
       if (Object.hasOwnProperty.call(value, styleName)) {
