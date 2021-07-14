@@ -10,7 +10,7 @@ function setProps(dom, props) {
   }
 }
 
-function setProp(dom, key, value) {
+export function setProp(dom, key, value) {
   if (/^on/.test(key)) {
     // dom[key.toLowerCase()] = value;
     addEvent(dom, key, value)
